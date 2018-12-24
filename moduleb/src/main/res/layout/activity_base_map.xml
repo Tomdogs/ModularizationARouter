@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textRes"
+            android:gravity="center"
+            android:textColor="@color/darkGray"
+            android:text="搜地点、查公交、找路线"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lineLoc"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在"></TextView>
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="北京" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市内找"></TextView>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:id="@+id/back"
+                    android:src="@drawable/sport_title_back"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    />
+                <AutoCompleteTextView
+
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:layout_toRightOf="@id/back"
+                    android:id="@+id/searchkey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    />
+
+                <Button
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/searchNearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="searchNearbyProcess"
+                    android:padding="10dip"
+                    android:text="搜索" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:onClick="searchButtonProcess"
+                    android:padding="10dip"
+                    android:text="城市内搜索" />
+
+                <Button
+                    android:id="@+id/searchNearby6666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:onClick="searchNearbyProcess"
+                    android:padding="10dip"
+                    android:text="周边搜索" />
+
+                <Button
+                    android:id="@+id/searchBound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:onClick="searchBoundProcess"
+                    android:padding="10dip"
+                    android:text="区域搜索" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dip" />
+
+    <ImageView
+        android:visibility="visible"
+        android:onClick="currentLoc"
+        android:src="@mipmap/ic_device_gps_fixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="0dp"/>
+
+</RelativeLayout>

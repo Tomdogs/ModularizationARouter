@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhongdun.ga.fri.modularizationarouter.MainActivity">
+    <Button
+        android:text="登录"
+        android:onClick="login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonPPMap"
+            android:onClick="skipPPmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PPMap"
+            />
+
+        <Button
+            android:id="@+id/buttonbaidu"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPPMap"
+            android:onClick="skipBaidu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="百度地图"
+
+            />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@+id/buttonbaidu"
+            android:onClick="skipGaode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高德地图"
+
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
