@@ -1,5 +1,5 @@
 # ModularizationARouter
-使用ARouter将PPMap、百度地图和高德地图进行组件化开发
+使用ARouter将PPMap、百度地图和高德地图进行组件化开发，也提供了一个组件化开发的模板
 
 <div align=center><img width="300" src="https://github.com/Tomdogs/ModularizationARouter/raw/master/screenshots/概览.jpg"/></div>
 
